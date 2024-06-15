@@ -1,2 +1,2 @@
-# laravel-deepl
-Deepl library for the Laravel framwork
+# The deepl client for the laravel framework 
+Deepl library for the Laravel framework
