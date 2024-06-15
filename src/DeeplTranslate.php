@@ -6,10 +6,15 @@ use DeepL\Translator;
 
 class DeeplTranslate
 {
-    public function __construct(protected Translator $translator)
-    {
-      $this->translator = new Translator(config('deepl-translate.auth_key'));
-    }
+  /**
+   * @var Translator
+   */
+  protected Translator $translator;
+
+  public function __construct()
+  {
+    $this->translator = new Translator(config('deepl-translate.auth_key'));
+  }
 
   /**
    * @param string|array $text
@@ -18,16 +23,16 @@ class DeeplTranslate
    * @param array $options
    * @return mixed
    */
-    public function translate(
-      string|array $text,
-      string $targetLang,
-      string $sourceLang=null,
-      array $options = []
-    ): mixed
-    {
-      $sourceLang = $sourceLang?: config('deepl-translate.default_lang');
-      $options = $options ?? config('deepl-translate.options');
+  public function translate(
+    string|array $text,
+    string       $targetLang,
+    string       $sourceLang = null,
+    array        $options = []
+  ): mixed
+  {
+    $sourceLang = $sourceLang ?: config('deepl-translate.default_lang');
+    $options = $options ?? config('deepl-translate.options');
 
-      return $this->translator->translateText($text, $sourceLang, $targetLang, $options);
-    }
+    return $this->translator->translateText($text, $sourceLang, $targetLang, $options);
+  }
 }
