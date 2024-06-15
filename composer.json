@@ -1,0 +1,27 @@
+{
+  "name": "rbrkovic/deepl-trnaslate",
+  "description": "Laravel library for Deepl",
+  "keywords": [
+    "larave",
+    "deepl",
+    "translations",
+    "mutlilanguage"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Radomir Brkovic",
+      "email": "brkovic.radomir@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "deeplcom/deepl-php": "^1.7"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "DeeplTranslate\\": "src"
+    }
+  }
+}
