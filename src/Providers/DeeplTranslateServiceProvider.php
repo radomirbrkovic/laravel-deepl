@@ -12,7 +12,6 @@ class DeeplTranslateServiceProvider extends ServiceProvider
     $this->registerConfig();
 
     $this->app->singleton('deepl-translate', function () {
-
       return new DeeplTranslate();
     });
   }
