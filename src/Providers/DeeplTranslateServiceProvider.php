@@ -7,8 +7,9 @@ use Illuminate\Support\ServiceProvider;
 
 class DeeplTranslateServiceProvider extends ServiceProvider
 {
-  public function boot() {
-      $this->registerConfig();
+  public function boot()
+  {
+    $this->registerConfig();
 
     $this->app->singleton('deepl-translate', function () {
 
@@ -24,10 +25,9 @@ class DeeplTranslateServiceProvider extends ServiceProvider
   private function registerConfig()
   {
     $this->publishes([
-      __DIR__ . '/../../config/deepl-translate.php' => config_path('deepl-translate.php'),
-    ], 'genera');
+      __DIR__ . '/../config/deepl-translate.php' => config_path('deepl-translate.php'),
+    ]);
 
-    $this->mergeConfigFrom(__DIR__ . '/../../config/deepl-translate.php', 'deepl-translate');
   }
 
 

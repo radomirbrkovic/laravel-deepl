@@ -26,6 +26,9 @@
   },
   "extra": {
     "laravel": {
+      "providers": [
+        "DeeplTranslate\\Providers\\DeeplTranslateServiceProvider"
+      ],
       "aliases": {
         "DeeplTranslate": "DeeplTranslate\\Facades\\DeeplTranslate"
       }
