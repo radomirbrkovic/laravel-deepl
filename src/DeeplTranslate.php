@@ -35,4 +35,20 @@ class DeeplTranslate
 
     return $this->translator->translateText($text, $sourceLang, $targetLang, $options);
   }
+
+  /**
+   * @return array
+   */
+  public function getSupportedSourceLanguages(): array
+  {
+    return $this->translator->getSourceLanguages();
+  }
+
+  /**
+   * @return array
+   */
+  public function getSupportedTargetLanguages(): array
+  {
+    return $this->translator->getTargetLanguages();
+  }
 }
