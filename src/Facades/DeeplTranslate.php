@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static translate(string|array $text, string $targetLang, string $sourceLang = null, array $options = []): mixed
+ * @method static getSupportedSourceLanguages(): array
+ * @method static getSupportedTargetLanguages(): array
  *
  * @see DeeplTranslate\DeeplTranslate
  */
